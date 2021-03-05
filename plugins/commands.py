@@ -6,10 +6,10 @@ from translation import Translation
 async def start(client, message):
     await client.send_message(
         chat_id=message.chat.id,
-        disable_web_page_preview=True,
         text=Translation.START_TEXT.format(message.from_user.mention),
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔰 HELP 🔰", callback_data="help"), InlineKeyboardButton("🔰 ABOUT 🔰", callback_data="about"), ],
-                                           [InlineKeyboardButton('⚙ Channel ⚙', url='https://telegram.me/FNPROJECTS'), InlineKeyboardButton('⚙ Group ⚙', url='https://telegram.me/FayasChat')]]),
+        parse_mode="html",
+        disable_web_page_preview=True,
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔰 HELP 🔰", callback_data="help"), InlineKeyboardButton("🔰 ABOUT 🔰", callback_data="about")]]),
         reply_to_message_id=message.message_id
     )
 
@@ -17,10 +17,10 @@ async def start(client, message):
 async def help(client, message):
     await client.send_message(    
         chat_id=message.chat.id,
-        disable_web_page_preview=True,
         text=Translation.HELP_USER,
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Channel ⚙', url='https://telegram.me/FNPROJECTS'), InlineKeyboardButton('⚙ Group ⚙', url='https://telegram.me/FayasChat'),],
-                                           [InlineKeyboardButton("🔙 BACK", callback_data="home"), InlineKeyboardButton("ℹ️ ABOUT", callback_data="about"), InlineKeyboardButton("✖️ CLOSE", callback_data="close")]]),
+        parse_mode="html",
+        disable_web_page_preview=True,
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔰 ABOUT 🔰", callback_data="about"), InlineKeyboardButton("🔰 HOME 🔰", callback_data="home")]]),
         reply_to_message_id=message.message_id
     )
 
@@ -28,10 +28,9 @@ async def help(client, message):
 async def about(client, message):
     await client.send_message(
         chat_id=message.chat.id,
-        disable_web_page_preview=True,
         text=Translation.ABOUT_TEXT,
         parse_mode="html",
         disable_web_page_preview=True,
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 BACK 🔙", callback_data="help"), InlineKeyboardButton("✖️ CLOSE ✖️", callback_data="close")]]),
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔰 HELP 🔰", callback_data="help"), InlineKeyboardButton("🔰 HOME 🔰", callback_data="home")]]),
         reply_to_message_id=message.message_id
     )
