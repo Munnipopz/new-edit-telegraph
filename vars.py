@@ -15,7 +15,7 @@ class Config(object):
     ADL_BOT_RQ = {}
 
     # set timeout for subprocess
-    PROCESS_MAX_TIMEOUT = int(os.environ.get("TIME_LIMIT"))
+    PROCESS_MAX_TIMEOUT = int(os.environ["TIME_LIMIT"])
 
     # Update channel for Force Subscribe
     UPDATE_CHANNEL = os.environ.get("UPDATE_CHANNEL", "")
