@@ -20,7 +20,7 @@ async def help(client, message):
         text=Translation.HELP_USER,
         parse_mode="html",
         disable_web_page_preview=True,
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔰 ABOUT 🔰", callback_data="about"), InlineKeyboardButton("🔰 HOME 🔰", callback_data="home")]]),
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔰 HOME 🔰", callback_data="home"), InlineKeyboardButton("🔰 ABOUT 🔰", callback_data="about")]]),
         reply_to_message_id=message.message_id
     )
 
