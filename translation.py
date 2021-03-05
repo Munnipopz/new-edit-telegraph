@@ -25,8 +25,10 @@ Made with love ❤️ by @FayasNoushad from India 🇮🇳. Contact <a href='htt
 - Language : <a href='https://www.python.org/'>Python3</a>
 - Framework : <a href='https://docs.pyrogram.org/'>Pyrogram</a>
 - Server : <a href='https://{Info.SERVER_DOMAIN}/'>{Info.SERVER}</a>
-- Credits : <a href='https://github.com/FayasNoushad/Image-Editor#credits'>Click Here</a>
+- Credits : <a href='https://github.com/FayasNoushad/Telegraph-Uploader-Bot#credits'>Click Here</a>
 - Source : <a href='https://github.com/FayasNoushad/Telegraph-Uploader-Bot'>Click Here</a>
+
+Made with love ❤️ by @FayasNoushad from India 🇮🇳. Contact <a href='https://telegram.me/FayasChat'>support group</a> for discussion.
 """
     DOWNLOAD_TEXT = "<code>Downloading to My Server ...</code>"
     UPLOADING_TEXT = "<code>Downloading Completed. Now I'am Uploading to telegra.ph Link ...</code>"
