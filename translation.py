@@ -15,7 +15,7 @@ Made with love ❤️ by @FayasNoushad from India 🇮🇳. Contact <a href='htt
 
 Made with love ❤️ by @FayasNoushad from India 🇮🇳. Contact <a href='https://telegram.me/FayasChat'>support group</a> for discussion.
 """
-    ABOUT_TEXT = """
+    ABOUT_TEXT = f"""
 <b><u>Informations About Me</u></b>
 
 - Name : <a href='https://telegram.me/{Info.BOT_USERNAME}'>{Info.BOT_NAME}</a>
