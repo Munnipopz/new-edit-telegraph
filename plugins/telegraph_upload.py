@@ -34,22 +34,26 @@ async def getmedia(bot, update):
                 return
         else:
             Config.ADL_BOT_RQ[str(update.from_user.id)] = time.time()
+    media = update.document or update.video or update.video_note
     medianame = "FayasNoushad/FnTelegraphBot"
-    dwn = await bot.send_message(chat_id = update.chat.id, text=Translation.DOWNLOAD_TEXT, parse_mode="html", disable_web_page_preview=True, reply_to_message_id=update.message_id)
-    await bot.download_media(message=message, file_name=medianame)
-    await dwn.edit_text(text=Translation.UPLOADING_TEXT)
-    try:
-        response = upload_file(medianame)
-    except Exception as error:
-        await dwn.edit_text(text=Translation.SOMETHING_WRONG, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("❔ More Help ❔", callback_data="help")]]))
-        return
-    await dwn.edit_text(
-        text=f"<b>Link :-</b> <code>https://telegra.ph{response[0]}</code>\n\n<b>Join :-</b> @FNPROJECTS",
-        disable_web_page_preview=True,
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Open Link", url=f"https://telegra.ph{response[0]}"), InlineKeyboardButton(text="Share Link", url=f"https://telegram.me/share/url?url=https://telegra.ph{response[0]}"), ],
-                                           [InlineKeyboardButton(text="⚙ Join Channel ⚙", url="https://telegram.me/FNPROJECTS")]])
-        )
-    try:
-        os.remove(medianame)
-    except:
-        pass
+    if(message.media.file_size < 5242880):
+        dwn = await bot.send_message(chat_id=update.chat.id, text=Translation.DOWNLOAD_TEXT, parse_mode="html", disable_web_page_preview=True, reply_to_message_id=update.message_id)
+        await bot.download_media(message=media, file_name=medianame)
+        await dwn.edit_text(text=Translation.UPLOADING_TEXT)
+        try:
+            response = upload_file(medianame)
+        except Exception as error:
+            await dwn.edit_text(text=Translation.SOMETHING_WRONG, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("❔ More Help ❔", callback_data="help")]]))
+            return
+        await dwn.edit_text(
+            text=f"<b>Link :-</b> <code>https://telegra.ph{response[0]}</code>\n\n<b>Join :-</b> @FNPROJECTS",
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Open Link", url=f"https://telegra.ph{response[0]}"), InlineKeyboardButton(text="Share Link", url=f"https://telegram.me/share/url?url=https://telegra.ph{response[0]}"), ],
+                                               [InlineKeyboardButton(text="⚙ Join Channel ⚙", url="https://telegram.me/FNPROJECTS")]])
+            )
+        try:
+            os.remove(medianame)
+        except:
+            pass 
+    else:
+        await update.reply_text("Size Should Be Less Than 5 mb")
