@@ -37,7 +37,7 @@ async def getmedia(bot, update):
     media = update.document or update.video or update.video_note
     medianame = "FayasNoushad/FnTelegraphBot"
     dwn = await bot.send_message(chat_id=update.chat.id, text=Translation.DOWNLOAD_TEXT, parse_mode="html", disable_web_page_preview=True, reply_to_message_id=update.message_id)
-    await bot.download_media(message=media, file_name=medianame)
+    await bot.download_media(chat_id=update.chat.id, file_id_str=media.file_id, file_name=medianame)
     await dwn.edit_text(text=Translation.UPLOADING_TEXT)
     try:
         response = upload_file(medianame)
