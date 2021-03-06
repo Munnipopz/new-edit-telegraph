@@ -36,10 +36,9 @@ async def getmedia(bot, update):
             Config.ADL_BOT_RQ[str(update.from_user.id)] = time.time()
     media = update.document or update.video or update.video_note
     medianame = "FayasNoushad/FnTelegraphBot"
-    if(media.file_size < 5242880):
-        dwn = await bot.send_message(chat_id=update.chat.id, text=Translation.DOWNLOAD_TEXT, parse_mode="html", disable_web_page_preview=True, reply_to_message_id=update.message_id)
-        await bot.download_media(message=media, file_name=medianame)
-        await dwn.edit_text(text=Translation.UPLOADING_TEXT)
+    dwn = await bot.send_message(chat_id=update.chat.id, text=Translation.DOWNLOAD_TEXT, parse_mode="html", disable_web_page_preview=True, reply_to_message_id=update.message_id)
+    await bot.download_media(message=media, file_name=medianame)
+    await dwn.edit_text(text=Translation.UPLOADING_TEXT)
         try:
             response = upload_file(medianame)
         except Exception as error:
@@ -54,6 +53,4 @@ async def getmedia(bot, update):
         try:
             os.remove(medianame)
         except:
-            pass 
-    else:
-        await update.reply_text("Size Should Be Less Than 5 mb")
+            pass
