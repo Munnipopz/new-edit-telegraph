@@ -7,7 +7,7 @@ from translation import Translation
 from vars import Config
 
 @Client.on_message(filters.media & filters.private)
-async def getmedia(client, message):
+async def getmedia(bot, update):
     if Config.UPDATE_CHANNEL:
         try:
           user = await bot.get_chat_member(Config.UPDATE_CHANNEL, update.chat.id)
@@ -33,8 +33,8 @@ async def getmedia(client, message):
         else:
             Config.ADL_BOT_RQ[str(update.from_user.id)] = time.time()
     medianame = "FNPROJECTS/FnTelegraphBot"
-    dwn = await client.send_message(chat_id = message.chat.id, text=Translation.DOWNLOAD_TEXT, parse_mode="html", disable_web_page_preview=True, reply_to_message_id=message.message_id)
-    await client.download_media(message=message, file_name=medianame)
+    dwn = await bot.send_message(chat_id = message.chat.id, text=Translation.DOWNLOAD_TEXT, parse_mode="html", disable_web_page_preview=True, reply_to_message_id=message.message_id)
+    await bot.download_media(message=message, file_name=medianame)
     await dwn.edit_text(text=Translation.UPLOADING_TEXT)
     try:
         response = upload_file(medianame)
