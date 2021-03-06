@@ -20,7 +20,7 @@ async def getmedia(bot, update):
           await update.reply_text(text=Translation.FORCE_SUBSCRIBE_TEXT, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="😎 Join Channel 😎", url=f"https://telegram.me/{Config.UPDATE_CHANNEL}")]]))
           return
         except Exception:
-          await update.reply_text(text=Translation.SOMETHING_WRONG)
+          await update.reply_text(text=Translation.SOMETHING_WRONG, disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("❔ More Help ❔", callback_data="help")]]))
           return 
     if update.from_user.id not in Config.AUTH_USERS:
         if str(update.from_user.id) in Config.ADL_BOT_RQ:
@@ -42,7 +42,7 @@ async def getmedia(bot, update):
     try:
         response = upload_file(medianame)
     except Exception as error:
-        await dwn.edit_text(text=Translation.SOMETHING_WRONG, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("❔ More Help ❔", callback_data="help")]]))
+        await dwn.edit_text(text=Translation.SOMETHING_WRONG, disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("❔ More Help ❔", callback_data="help")]]))
         return
     await dwn.edit_text(
         text=f"<b>Link :-</b> <code>https://telegra.ph{response[0]}</code>\n\n<b>Join :-</b> @FNPROJECTS",
