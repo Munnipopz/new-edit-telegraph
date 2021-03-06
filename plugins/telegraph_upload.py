@@ -1,4 +1,6 @@
-import os
+import os 
+import time 
+import math
 from telegraph import upload_file
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton 
