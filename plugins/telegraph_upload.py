@@ -42,13 +42,13 @@ async def getmedia(bot, update):
     try:
         response = upload_file(medianame)
     except Exception as error:
-        await dwn.edit_text(text=Translation.SOMETHING_WRONG, disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("❔ More Help ❔", callback_data="help")]]))
+        await dwn.edit_text(text=Translation.SOMETHING_WRONG, disable_web_page_preview=True)
         return
     await dwn.edit_text(
-        text=f"<b>Link :-</b> <code>https://telegra.ph{response[0]}</code>\n\n<b>Join :-</b> @FNPROJECTS",
+        text=f"<b>Link :-</b> <code>https://telegra.ph{response[0]}</code>\n\n<b>Join :-</b> @FayasNoushad",
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Open Link", url=f"https://telegra.ph{response[0]}"), InlineKeyboardButton(text="Share Link", url=f"https://telegram.me/share/url?url=https://telegra.ph{response[0]}"), ],
-                                           [InlineKeyboardButton(text="⚙ Join Channel ⚙", url="https://telegram.me/FayasNoushad")]])
+                                           [InlineKeyboardButton(text="⚙ Join Updates Channel ⚙", url="https://telegram.me/FayasNoushad")]])
         )
     try:
         os.remove(medianame)
