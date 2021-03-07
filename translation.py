@@ -4,7 +4,7 @@ class Translation(object):
     START_TEXT = """
 Hello {}, I' am small media or file to `telegra.ph` link uploader bot.
 
-Made with love ❤️ by @FayasNoushad from India 🇮🇳. Contact <a href='https://telegram.me/FayasChat'>support group</a> for discussion.
+Made with love ❤️ in Kerala, India 🇮🇳 by @FayasNoushad. Contact @FayasChat for discussion. Use /help for more...
 """
     HELP_USER = """
 <b><u>Help and Informations</u></b>
@@ -13,22 +13,7 @@ Made with love ❤️ by @FayasNoushad from India 🇮🇳. Contact <a href='htt
 - Then I will download it.
 - I will then upload it to the `Telegra.ph` link.
 
-Made with love ❤️ by @FayasNoushad from India 🇮🇳. Contact <a href='https://telegram.me/FayasChat'>support group</a> for discussion.
-"""
-    ABOUT_TEXT = f"""
-<b><u>Informations About Me</u></b>
-
-- Name : <a href='https://telegram.me/{Info.BOT_USERNAME}'>{Info.BOT_NAME}</a>
-- Channel : <a href='http://telegram.me/FayasNoushad'>Fayas</a>
-- Support : <a href='http://telegram.me/FayasChat'> Fayas Chat</a>
-- Projects : <a href='http://telegram.me/FNPROJECTS'>Fayas Projects</a>
-- Language : <a href='https://www.python.org/'>Python3</a>
-- Framework : <a href='https://docs.pyrogram.org/'>Pyrogram</a>
-- Server : <a href='https://{Info.SERVER_DOMAIN}/'>{Info.SERVER}</a>
-- Credits : <a href='https://github.com/FayasNoushad/Telegraph-Uploader-Bot#credits'>Click Here</a>
-- Source : <a href='https://github.com/FayasNoushad/Telegraph-Uploader-Bot'>Click Here</a>
-
-Made with love ❤️ by @FayasNoushad from India 🇮🇳. Contact <a href='https://telegram.me/FayasChat'>support group</a> for discussion.
+Made with love ❤️ in Kerala, India 🇮🇳 by @FayasNoushad. Contact @FayasChat for discussion.
 """
     DOWNLOAD_TEXT = "<code>Downloading to My Server ...</code>"
     UPLOADING_TEXT = "<code>Downloading Completed. Now I'am Uploading to telegra.ph Link ...</code>"
