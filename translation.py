@@ -17,7 +17,7 @@ Made with love ❤️ in Kerala, India 🇮🇳 by @FayasNoushad. Contact @Fayas
 """
     DOWNLOAD_TEXT = "<code>Downloading to My Server ...</code>"
     UPLOADING_TEXT = "<code>Downloading Completed. Now I'am Uploading to telegra.ph Link ...</code>"
-    SOMETHING_WRONG = "Something Wrong! Click help button for more... Contact <a href='https://telegram.me/FayasChat'>support group</a>."
+    SOMETHING_WRONG = "Something Wrong! Contact @FayasChat."
     FREE_USER_LIMIT_Q_SZE = "Sorry Friend, Free users can only 1 request per {} minutes. Please try again after {} seconds later."
     FORCE_SUBSCRIBE_TEXT = "<code>Sorry Dear You Must Join My Updates Channel for using me 😌😉....</code>"
     BANNED_USER_TEXT = "<code>You are Banned!</code>"
