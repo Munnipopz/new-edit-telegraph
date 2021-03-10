@@ -29,4 +29,4 @@
 
 * [Pyrogram](https://github.com/pyrogram/pyrogram)
 * [Arun PT](https://github.com/CW4RR10R)
-* [Contributors](https://github.com/FayasNoushad/Telegraph-Uploader-Bot/graphs/contributors
+* [Contributors](https://github.com/FayasNoushad/Telegraph-Uploader-Bot/graphs/contributors)
