@@ -27,7 +27,6 @@
 
 ### Credits 
 
-
-• Special Thanks to [Arun](https://ArunPT.me) for his [Image Uploader](https://github.com/CW4RR10R/Image-UploadBot) Repository 
-
-• Thanks to [Dan](https://github.com/delivrance) for his [Pyrogram](https://pyrogram.org)
+* [Pyrogram](https://github.com/pyrogram/pyrogram)
+* [Arun PT](https://github.com/CW4RR10R)
+* [Contributors](https://github.com/FayasNoushad/Telegraph-Uploader-Bot/graphs/contributors
