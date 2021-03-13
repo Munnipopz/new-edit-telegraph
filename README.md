@@ -24,3 +24,8 @@
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/FayasNoushad/Telegraph-Uploader-Bot)
 
+### Credits 
+
+* [Pyrogram](https://github.com/pyrogram/pyrogram)
+* [Arun PT](https://github.com/CW4RR10R)
+* [Contributors](https://github.com/FayasNoushad/Telegraph-Uploader-Bot/graphs/contributors)
