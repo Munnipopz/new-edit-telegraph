@@ -5,7 +5,14 @@
     <img src="http://ForTheBadge.com/images/badges/made-with-python.svg">
   </a>
 </p>
-
+<p align="center">
+  <a href="https://twitter.com/FayasNoushad">
+    <img height="25px" src="https://img.shields.io/badge/Twitter_Account-30302f?style=flat&logo=twitter">
+  </a>
+  <a href="https://github.com/FayasNoushad">
+    <img height="25px" src="https://img.shields.io/badge/GitHub_Account-30302f?style=flat&logo=github">
+  </a>
+</p>
 <p align="center">
   <a href="https://telegram.me/FayasNoushad">
     <img height="25px" src="https://img.shields.io/badge/Updates_Channel-30302f?style=flat&logo=telegram">
