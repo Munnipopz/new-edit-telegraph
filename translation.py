@@ -2,14 +2,9 @@ class Translation(object):
     START_TEXT = """
 Hello {}, I' am small media or file to telegra.ph link uploader bot.
 
-Made by @FayasNoushad
-"""
-    HELP_USER = """
-<b><u>Help and Informations</u></b>
-
-- Just give me a media under 5MB.
-- Then I will download it.
-- I will then upload it to the telegra.ph link.
+- Just give me a media under 5MB
+- Then I will download it
+- I will then upload it to the telegra.ph link
 
 Made by @FayasNoushad
 """
