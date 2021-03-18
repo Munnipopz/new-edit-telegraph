@@ -48,7 +48,7 @@ async def getmedia(bot, update):
         text=f"<b>Link :-</b> <code>https://telegra.ph{response[0]}</code>\n\n<b>Join :-</b> @FayasNoushad",
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Open Link", url=f"https://telegra.ph{response[0]}"), InlineKeyboardButton(text="Share Link", url=f"https://telegram.me/share/url?url=https://telegra.ph{response[0]}"), ],
-                                           [InlineKeyboardButton(text="⚙ Join Updates Channel ⚙", url="https://telegram.me/FayasNoushad")]])
+                                           [InlineKeyboardButton(text="⚙ Join Updates Channel ⚙", url="https://telegram.me/cybersecurityhacker")]])
         )
     try:
         os.remove(medianame)
