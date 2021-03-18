@@ -35,7 +35,7 @@ async def getmedia(bot, update):
         else:
             Config.ADL_BOT_RQ[str(update.from_user.id)] = time.time()
     media = update.document or update.video or update.video_note
-    medianame = "./DOWNLOADS/" + "FayasNoushad/FnTelegraphBot"
+    medianame = "./DOWNLOADS/" + "cybersecurityhacker/CyTelegraphBot"
     dwn = await bot.send_message(chat_id=update.chat.id, text=Translation.DOWNLOAD_TEXT, parse_mode="html", disable_web_page_preview=True, reply_to_message_id=update.message_id)
     await bot.download_media(message=update, file_name=medianame)
     await dwn.edit_text(text=Translation.UPLOADING_TEXT)
